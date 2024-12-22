@@ -198,10 +198,9 @@ export const setLocalStorage = () => {
   localStorage.setItem('Employees', JSON.stringify(employees))
   localStorage.setItem('Admin', JSON.stringify(admin))
 }
+
 export const getLocalStorage = () => {
   const dataEmp = JSON.parse(localStorage.getItem('Employees'))
   const dataAdmin = JSON.parse(localStorage.getItem('Admin'))
-
-  console.log(dataAdmin, dataEmp);
-  
+  return {dataAdmin, dataEmp}
 }

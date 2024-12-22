@@ -1,19 +1,19 @@
 import { useState } from "react"
 
 
-function Login() {
+function Login(userType) {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const submitHandler = (e) => {
+    userType.userType(email, password)
     e.preventDefault()
-    console.log("Submitted")
-    console.log(email, 'and', password)
-
     setEmail("")
     setPassword("")
   } 
+
+
 
 
   return (
